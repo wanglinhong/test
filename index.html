@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+    <title>百货商店</title>
+
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="./dist/css/swiper.min.css">
+    <style>
+        * {
+            margin:0;
+            padding:0;
+        }
+        html, body {
+            position: relative;
+            height: 100%;
+        }
+        body {
+            background-color: rgb(255, 255, 255);
+            font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+            font-size: 14px;
+            color:#000;
+            margin: 0;
+            padding: 0;
+        }
+        .swiper-container {
+        }
+        .swiper-slide {
+            height: 441px;
+            width: 100%;
+            text-align: center;
+            /* font-size: 18px;
+            background: #fff; */
+
+            /* Center slide text vertically */
+            /* display: -webkit-box;
+            display: -ms-flexbox;
+            display: -webkit-flex;
+            display: flex;
+            -webkit-box-pack: center;
+            -ms-flex-pack: center;
+            -webkit-justify-content: center;
+            justify-content: center;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            -webkit-align-items: center;
+            align-items: center; */
+            background: url(./img/swiper.jpg) top center no-repeat;
+        }
+        .product-list{
+            width: 1000px;
+            margin: 0 auto;
+            padding: 0;
+            background: #fff;
+            text-align: center;
+            position: relative;
+            z-index: 2;
+        }
+        .clothes{
+            font-size: 13px;
+            border: none;
+            margin-top: 5px;
+            color: #515151;
+        }
+        .tip{
+            height: 32px;
+            width: 998px;
+            background: url(./img/newProduct.png) no-repeat;
+        }
+        .clothes-ul{
+            list-style: none;
+        }
+        .clothes-li{
+            width: 246px;
+            background: #f8f8f8;
+            float: left;
+            margin: 2px 2px 0 0;
+            border: 1px solid #DDDDDD;
+            display: inline;
+        }
+        .clothes-img{
+            width: 100%;
+            height: 331px;
+            display: inline;
+        }
+        .goods_detail_new{
+            text-align: center;
+            padding: 5px;
+            overflow: hidden;
+            height: 15px;
+        }
+        .clear{
+            font: 0/0 sans-serif;
+            height: 0;
+            overflow: hidden;
+            clear: both;
+            display: block;
+            visibility: hidden;
+        }
+        .frame_banner{
+            width: 998px;
+            height: 370px;
+        }
+        .footer-box{
+            background: #454545;
+            text-align: center;
+            color: #A5A5A5;
+            font-size: 12px;
+            padding: 5px 0;
+            margin-top: 20px;
+        }
+        .footer-span{
+            display: inline;
+            margin: 0 30px;
+            text-decoration: none;
+            overflow: hidden;
+            color: #A5A5A5;
+        }
+        .logo{
+            width: 960px;
+            height: 100px;
+            margin: 0 auto;
+            position: relative;
+        }
+        .logo-img{
+            width: 240px;
+            height: 100px;
+            background: url(img/uugai.com_1547370820900.png) no-repeat;
+            background-size: 240px 100px;
+            display: inline-block;
+        }
+        .logo-tel{
+            position: absolute;
+            right: 0;
+            top: 2px;
+            height: 18px;
+            display: inline-block;
+            font-size: 26px;
+            font-size: 18px;
+            color: #999999;
+            margin-top: 23px;
+            text-align: right;
+        }
+        .icon-tel {
+            position: relative;
+            right: 6px;
+            top: 2px;
+            width: 16px;
+            height: 18px;
+            background: url(./img/tel.png) no-repeat;
+            display: inline-block;
+        }
+        .logo-b{
+            color: #444;
+            font-size: 26px;
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div class="logo"><div class="logo-img"></div><span class="logo-tel"><i class="icon-tel"></i>咨询热线<b class="logo-b">0595-3398 3009</b></span></div>
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide"></div>
+            <div class="swiper-slide"></div>
+            <div class="swiper-slide"></div>
+        </div>
+        <!-- Add Pagination -->
+        <div class="swiper-pagination"></div>
+    </div>
+    <div class="product-list">
+        <div class="clothes">
+            <div class="tip"></div>
+            <ul class="clothes-ul">
+                <li class="clothes-li">
+                    <img class="clothes-img" src="./img/1.jpg"/>
+                    <div class="goods_detail_new">2018冬装新品女加厚丝绒卫衣</div>
+                </li>
+                <li class="clothes-li">
+                    <img class="clothes-img" src="./img/c1.jpg"/>
+                    <div class="goods_detail_new">2018秋装新品女羊腿袖牛仔外套</div>
+                </li>
+                <li class="clothes-li">
+                    <img class="clothes-img" src="./img/c2.jpg"/>
+                    <div class="goods_detail_new">2018冬装新品女人像印花立领卫衣</div>
+                </li>
+                <li class="clothes-li">
+                    <img class="clothes-img" src="./img/c3.jpg"/>
+                    <div class="goods_detail_new">2018冬装新品女撞色帽子加厚外套</div>
+                </li>
+                <li class="clothes-li">
+                    <img class="clothes-img" src="./img/c4.jpg"/>
+                    <div class="goods_detail_new">2018冬装新品女字母印花小脚休闲裤</div>
+                </li>
+                <li class="clothes-li">
+                    <img class="clothes-img" src="./img/c5.jpg"/>
+                    <div class="goods_detail_new">2018秋装新品女净色修身打底裤</div>
+                </li>
+                <li class="clothes-li">
+                    <img class="clothes-img" src="./img/c6.jpg"/>
+                    <div class="goods_detail_new">2018秋装新品女粉色腰带牛仔裤</div>
+                </li>
+                <li class="clothes-li">
+                    <img class="clothes-img" src="./img/c7.jpg"/>
+                    <div class="goods_detail_new">2018冬装新品女侧边撞色条休闲裤</div>
+                </li>
+                <li class="clothes-li">
+                    <img class="clothes-img" src="./img/c8.jpg"/>
+                    <div class="goods_detail_new">2018冬装新品男花纱圆领毛衣</div>
+                </li>
+                <li class="clothes-li">
+                    <img class="clothes-img" src="./img/c9.jpg"/>
+                    <div class="goods_detail_new">2018冬装新品男长袖外套</div>
+                </li>
+                <li class="clothes-li">
+                    <img class="clothes-img" src="./img/c10.jpg"/>
+                    <div class="goods_detail_new">2018冬装新品男净色棉质长袖衬衫</div>
+                </li>
+                <li class="clothes-li">
+                    <img class="clothes-img" src="./img/c11.jpg"/>
+                    <div class="goods_detail_new">2018冬装新品男刺绣印花连帽卫衣</div>
+                </li>
+                <li class="clothes-li">
+                    <img class="clothes-img" src="./img/c12.jpg"/>
+                    <div class="goods_detail_new">2018冬装新品男净色加绒休闲裤</div>
+                </li>
+                <li class="clothes-li">
+                    <img class="clothes-img" src="./img/c13.jpg"/>
+                    <div class="goods_detail_new">2018冬装新品男运动条刺绣休闲裤</div>
+                </li>
+                <li class="clothes-li">
+                    <img class="clothes-img" src="./img/c14.jpg"/>
+                    <div class="goods_detail_new">2018秋装新品男撞色洗水牛仔裤</div>
+                </li>
+                <li class="clothes-li">
+                    <img class="clothes-img" src="./img/c15.jpg"/>
+                    <div class="goods_detail_new">2018秋装新品男字母印花休闲裤</div>
+                </li>
+                <li class="clothes-li">
+                    <img class="clothes-img" src="./img/c16.jpg"/>
+                    <div class="goods_detail_new">2018秋潮流复古磨砂拼接系带老爹鞋运动女鞋</div>
+                </li>
+                <li class="clothes-li">
+                    <img class="clothes-img" src="./img/c17.jpg"/>
+                    <div class="goods_detail_new">流行针织料鞋运动/SH31悟道D</div>
+                </li>
+                <li class="clothes-li">
+                    <img class="clothes-img" src="./img/c18.jpg"/>
+                    <div class="goods_detail_new">2018秋英伦风复古系带休闲柔软男士皮鞋</div>
+                </li>
+                <li class="clothes-li">
+                    <img class="clothes-img" src="./img/c19.jpg"/>
+                    <div class="goods_detail_new">2018男秋时尚撞色贴条舒适轻便系带跑步鞋运动鞋</div>
+                </li>
+            </ul>
+            <div class="clear"></div>
+        </div>
+        <div class="clothes">
+            <div class="tip" style="background:url(./img/5.png) no-repeat;"></div>
+            <div class="frame_banner"><img src="./img/2.jpg"/></div>
+            <ul class="clothes-ul">
+                <li class="clothes-li">
+                    <img class="clothes-img" src="./img/3.jpg"/>
+                    <div class="goods_detail_new">露兰姬娜经典精华液护肤透明质酸补水保湿原液</div>
+                </li>
+                <li class="clothes-li">
+                    <img class="clothes-img" src="./img/h2.jpg"/>
+                    <div class="goods_detail_new">春雨 经典盒装护肤蜂蜜保湿补水面膜10片</div>
+                </li>
+                <li class="clothes-li">
+                    <img class="clothes-img" src="./img/h3.jpg"/>
+                    <div class="goods_detail_new">2018冬装新品女加厚丝绒卫衣</div>
+                </li>
+                <li class="clothes-li">
+                    <img class="clothes-img" src="./img/h4.jpg"/>
+                    <div class="goods_detail_new">娥佩兰薏仁调理化妆水爽肤水 保湿补水收缩毛孔500ml</div>
+                </li>
+                <li class="clothes-li">
+                    <img class="clothes-img" src="./img/h5.jpg"/>
+                    <div class="goods_detail_new">一叶子酪梨水漾保湿套装 洁面乳爽肤水保湿乳面霜5件装</div>
+                </li>
+                <li class="clothes-li">
+                    <img class="clothes-img" src="./img/h6.jpg"/>
+                    <div class="goods_detail_new">一叶子 植物酵素多效面膜 水漾滢润保湿补水面膜5片装</div>
+                </li>
+                <li class="clothes-li">
+                    <img class="clothes-img" src="./img/h7.jpg"/>
+                    <div class="goods_detail_new">得鲜济州岛99%芦荟胶补水保湿滋润祛痘印乳液面霜300ML</div>
+                </li>
+                <li class="clothes-li">
+                    <img class="clothes-img" src="./img/h8.jpg"/>
+                    <div class="goods_detail_new">火烈鸟四季火烈鸟羽扇睫毛膏D单支</div>
+                </li>
+                <li class="clothes-li">
+                    <img class="clothes-img" src="./img/h9.jpg"/>
+                    <div class="goods_detail_new">纳益其尔芦荟舒缓保湿凝露 芦荟胶补水面霜面膏300ML</div>
+                </li>
+                <li class="clothes-li">
+                    <img class="clothes-img" src="./img/h10.jpg"/>
+                    <div class="goods_detail_new">菲诗小铺每日草本洁面膏洗面奶 柠檬水蜜桃樱桃芦荟</div>
+                </li>
+                <li class="clothes-li">
+                    <img class="clothes-img" src="./img/h11.jpg"/>
+                    <div class="goods_detail_new">爱得菲自动彩妆728造型师三合一眉笔</div>
+                </li>
+                <li class="clothes-li">
+                    <img class="clothes-img" src="./img/h12.jpg"/>
+                    <div class="goods_detail_new">爱得菲 玫瑰之吻滋养雾感口红 抚平唇纹持久锁色</div>
+                </li>
+                <li class="clothes-li">
+                    <img class="clothes-img" src="./img/h13.jpg"/>
+                    <div class="goods_detail_new"> 比纯 显色轻奢甲油 均匀上色色彩饱满不易脱落</div>
+                </li>
+                <li class="clothes-li">
+                    <img class="clothes-img" src="./img/h14.jpg"/>
+                    <div class="goods_detail_new">佩翘封面高显色口红唇釉染唇膏</div>
+                </li>
+                <li class="clothes-li">
+                    <img class="clothes-img" src="./img/h15.jpg"/>
+                    <div class="goods_detail_new">璐璐经典自动彩妆自然天成持久防水眉笔</div>
+                </li>
+                <li class="clothes-li">
+                    <img class="clothes-img" src="./img/h16.jpg"/>
+                    <div class="goods_detail_new">库库韩舍经典多色盘彩妆晶钻闪耀八色眼影</div>
+                </li>
+            </ul>
+            <div class="clear"></div>
+        </div>
+        <div class="clothes">
+            <div class="tip" style="background:url(./img/4.png) no-repeat;"></div>
+            <div class="frame_banner"><img src="./img/4.jpg"/></div>
+            <ul class="clothes-ul">
+                <li class="clothes-li">
+                    <img class="clothes-img" src="./img/01.jpg"/>
+                    <div class="goods_detail_new">2018秋学院系列撞色字母系带平底学生休闲帆布女鞋</div>
+                </li>
+                <li class="clothes-li">
+                    <img class="clothes-img" src="./img/x2.jpg"/>
+                    <div class="goods_detail_new">2018秋潮流复古磨砂拼接系带老爹鞋运动女鞋</div>
+                </li>
+                <li class="clothes-li">
+                    <img class="clothes-img" src="./img/x3.jpg"/>
+                    <div class="goods_detail_new">2018冬时尚复古气质方头粗跟短靴女靴休闲女鞋</div>
+                </li>
+                <li class="clothes-li">
+                    <img class="clothes-img" src="./img/x4.jpg"/>
+                    <div class="goods_detail_new">2018女冬复古撞色系带时尚老爹鞋运动跑步女鞋</div>
+                </li>
+                <li class="clothes-li">
+                    <img class="clothes-img" src="./img/x5.jpg"/>
+                    <div class="goods_detail_new">2018学院系列字母印花平底高帮帆布鞋休闲女鞋</div>
+                </li>
+                <li class="clothes-li">
+                    <img class="clothes-img" src="./img/x6.jpg"/>
+                    <div class="goods_detail_new">SANFU流行针织料鞋运动/SH31悟道D</div>
+                </li>
+                <li class="clothes-li">
+                    <img class="clothes-img" src="./img/x7.jpg"/>
+                    <div class="goods_detail_new">2018秋时尚方扣亮钻浅口平跟方头单鞋气质女鞋</div>
+                </li>
+                <li class="clothes-li">
+                    <img class="clothes-img" src="./img/x8.jpg"/>
+                    <div class="goods_detail_new">2018女冬英伦复古圆头系带马丁靴休闲短靴女鞋</div>
+                </li>
+                <li class="clothes-li">
+                    <img class="clothes-img" src="./img/x9.png"/>
+                    <div class="goods_detail_new">飒达夏2018校园风牛津料字母贴标防水双肩包背包</div>
+                </li>
+                <li class="clothes-li">
+                    <img class="clothes-img" src="./img/x10.jpg"/>
+                    <div class="goods_detail_new">飒达夏2018秋韩范风磨砂水桶链条包斜挎女包</div>
+                </li>
+                <li class="clothes-li">
+                    <img class="clothes-img" src="./img/x11.jpg"/>
+                    <div class="goods_detail_new">飒达夏2018秋简约可爱毛球手柄手提女包（含毛球吊饰）389872</div>
+                </li>
+                <li class="clothes-li">
+                    <img class="clothes-img" src="./img/x12.jpg"/>
+                    <div class="goods_detail_new">飒达夏2018秋校园风方形双肩包学生大容量背包女包</div>
+                </li>
+                <li class="clothes-li">
+                    <img class="clothes-img" src="./img/x13.jpg"/>
+                    <div class="goods_detail_new">2018夏校园风布料荧光拉链轻便休闲双肩包女背包</div>
+                </li>
+                <li class="clothes-li">
+                    <img class="clothes-img" src="./img/x14.jpg"/>
+                    <div class="goods_detail_new">2018女冬韩范风大容量撞色手提包斜挎女包</div>
+                </li>
+                <li class="clothes-li">
+                    <img class="clothes-img" src="./img/x15.jpg"/>
+                    <div class="goods_detail_new">2016男混色两折抽卡PU长皮夹 简约商务净色钱包</div>
+                </li>
+                <li class="clothes-li">
+                    <img class="clothes-img" src="./img/x16.jpg"/>
+                    <div class="goods_detail_new">2016男混色两折PU短皮夹 简约商务净色钱包</div>
+                </li>
+            </ul>
+            <div class="clear"></div>
+        </div>
+    </div>
+    <div class="footer-box">
+        <a class="footer-span" href="./About.html?id=3" target="_blank">诚聘英才</a>| 
+        <a class="footer-span" href="./About.html?id=1" target="_blank">关于我们</a>| 
+        <a class="footer-span" href="./Mall.html" target="_blank">网站导航</a>| 
+        <a class="footer-span" href="./About.html?id=2" target="_blank">广告合作</a>| 
+        <a class="footer-span" href="./About.html?id=4" target="_blank">联系我们</a>
+    </div>
+
+      
+    <!-- Swiper JS -->
+    <script src="./dist/js/swiper.min.js"></script>
+    <script>
+        var swiper = new Swiper('.swiper-container', {
+            autoplay:true,
+            pagination: {
+                el: '.swiper-pagination',
+            },
+        });
+    </script>
+</body>
+</html>
